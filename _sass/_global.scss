@@ -1,0 +1,115 @@
+@mixin rem($size, $top:false, $bottom:false) {
+    font-size: $size * 1rem;
+    line-height: $size * $baseline-rems;
+    @if $top { margin-top: $top * $baseline-rems; }
+    @if $bottom { margin-bottom: $bottom * $baseline-rems; }
+}
+
+html {
+    background-color: white;
+    background: url(../img/bg.png) left top repeat;
+    font-size: 1.25em;
+    line-height: 1.4em;
+    //@include baseline-grid-background;
+
+    &.withbaseline {
+        background: url(../img/baselinegrid.png) left top repeat, url(../img/bg.png) left top repeat;
+    }
+
+}
+
+body {
+    @include serif;
+    color: #444;
+}
+
+a {
+    color: $red;
+    text-decoration: none;
+    &:visited {
+        color: $red;
+    }
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+h1,h2,h3 {
+    font-weight: $serif-regular;
+}
+
+h1 {
+    @include rem(2, $top: 2, $bottom: 1);
+    line-height: 2 * $baseline-rems;
+}
+
+h2 {
+    @include rem(1.5, $top: 2.5, $bottom: 1);
+    /*
+    h2 text can't wrap!
+    uneven line-height will break vertical rhythm. :(
+    */
+}
+
+h3 {
+    @include rem(0.9, $top: 2, $bottom: 1);
+    line-height: $baseline-rems;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+p, ul, ol, pre {
+    @include rem(1, $top: 0, $bottom: 1);
+}
+
+blockquote {
+    border-left: 1px solid rgba(0,0,0,0.2);
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 1rem;
+    font-style: italic;
+    color: #666;
+}
+
+code, pre {
+        font-family: Inconsolata, Menlo, Ubuntu Mono, Courier, monospace; 
+}
+
+code {
+    background: #ddd;
+    padding: 2px;
+    white-space: nowrap;
+}
+
+pre {
+    white-space: pre;
+    word-wrap: normal;
+    background-color: #222;
+    color: #ddd;
+    padding: 0 0.5rem;
+    overflow-x: scroll;
+    @include rem(0.7);
+    line-height: 1.4rem;
+    code {
+        background: inherit;
+        white-space: inherit;
+    }
+    .lineno {
+        color: #555;
+    }
+}
+
+figure {
+    img {
+        max-width: 100%;
+    }
+    figcaption {
+        font-style: italic;
+        color: #666;
+        text-align: center;
+        background: #eee;
+        @include rem(0.7, $top:0.5, $bottom:0.5);
+    }
+}
+
+

@@ -1,0 +1,29 @@
+// Defaults ------------------------------------------------------------------
+$default-transition-duration: 0.5s;
+
+$serif-regular: 400;
+$serif-bold: 700;
+@mixin serif {
+    font-family: elena-web-basic, Cambria, serif;
+}
+
+@mixin sans {
+    font-family: freight-sans-pro, Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+
+$background: #f7f7f7;
+$base: #444;
+//$lightbase: lighten($base, 30%);
+$yellow: #ffe000;
+$accent: #0080FF;
+$red: #D10052;
+
+
+// vertical rhythm
+//$base-font-size: 
+$show-column-grid-backgrounds: false;
+$grid-background-baseline-color: rgba(0,0,0,0.1);
+$grid-background-baseline-height: 28px;
+
+$baseline-rems: 1.4rem;

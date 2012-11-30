@@ -1,0 +1,189 @@
+body {
+    min-width: 15rem;
+    max-width: 27rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+#pageheader {
+    padding-top: 1 * $baseline-rems;
+    height: (3 * $baseline-rems);
+    background: url(../img/borderpixel.png) left bottom repeat-x;
+    a {
+        display: block;
+        height: (3 * $baseline-rems) - .037rem;
+        padding-left: 4rem;
+        background: url(../img/hands_60.png) left top no-repeat;
+        color: black;
+        &:hover {
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+
+    h1 {
+        //margin: 0;
+        @include rem(1, $top: 0, $bottom: 0);
+        //padding-top: 1 * $baseline-rems;
+    }
+
+    h2 {
+        color: #888;
+        font-style: italic;
+        //margin: 0;
+        @include rem(0.7, $top: 0.3, $bottom: 0);
+    }
+}
+
+#pagefooter {
+    margin-top: 3 * $baseline-rems;
+    padding-top: 1 * $baseline-rems;
+    padding-bottom: 2 * $baseline-rems;
+    background: url(../img/borderpixel.png) left top repeat-x;
+
+    .row {
+        width: 100%;
+        @include clearfix;
+        height: 3 * $baseline-rems;
+        h1 {
+            @include rem(1, $top: 1, $bottom: 0);
+        } 
+        .avatar {
+            display: inline-block;
+            float: left;
+            margin-right: 0.5rem;
+            background: white;
+            border: 1px solid #ddd;
+            padding: 4px;
+            @include transition;
+            &:hover {
+                background: lighten($red, 30%);
+            }
+            img {
+                display: block;
+                margin-bottom: 0;
+                padding: 0;
+            }
+        }
+    }
+    .about {
+        padding-left: 3.5rem;
+        p {
+            color: #666;
+            @include rem(0.8);
+            line-height: 1.4rem;
+            margin-bottom: $baseline-rems;
+            &.copyright {
+                color: #888;
+                //font-style: italic;
+                text-transform: uppercase;
+                font-size: 0.6em;
+                letter-spacing: 1px;
+                //padding-top: 1 * $baseline-rems;
+            }
+        }
+        .twitter {
+            font-style: italic;
+        }
+    }
+
+}
+
+.content {
+    line-height: 1.4rem;
+
+    h1,h2,h3 {
+        color: black;
+    }
+
+    time {
+        font-size: 0.8em;
+        color: #888;
+        padding-right: 1rem;
+    }
+
+    .index {
+        @include clearfix;
+        & + .index {
+            margin-top: $baseline-rems;
+        }
+        header { 
+            min-width: 10rem;
+            max-width: 22rem;
+            margin-left: 5rem;
+            padding: 0;
+            h1 {
+                font-size: 1.0rem;
+                line-height: 1.4rem;
+                margin: 0;
+                padding: 0;
+            }
+            .where {
+                font-size: 0.8rem;
+                line-height: 1.4rem;
+                margin: 0;
+                padding: 0;
+                color: #888;
+            }
+        }
+        time {
+            padding: 0;
+            width: 4.5rem;
+            margin-right: 0.5rem;
+            float: left;
+        }
+    }
+
+
+
+}
+
+ul, ol {
+    list-style-position: outside;
+    padding: 0;
+}
+
+.bigavatar {
+    text-align: center;
+    margin-bottom: 2rem;
+    img {
+        max-width: 100%;
+        display: block;
+    }
+    .framed {
+        display: block;
+        background-color: white;
+        margin: 0 auto;
+        padding: .45rem;
+        border: 1px solid #ddd;
+        max-width: 24rem;
+    }
+}
+
+.services {
+    small {
+        color: #888;
+        padding-left: 0.5rem;
+        font-size: 0.8em;
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+    ul, ol {
+        padding: 0 1rem;
+        list-style-position: normal;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    #pagefooter {
+        .about {
+            p {
+                @include rem(0.7, $top: 0, $bottom: 0.7);
+                line-height: 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+---
+layout: nil
+---
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+  <title>Idan Gazit</title>
+  <link href="http://gazit.me/"/>
+  <link type="application/atom+xml" rel="self" href="http://gazit.me/atom.xml"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>http://gazit.me/</id>
+  <author>
+    <name>Idan Gazit</name>
+    <email>idan@gazit.me</email>
+  </author>
+
+  {% for post in site.posts %}
+  <entry>
+    <id>http://gazit.me{{ post.id }}</id>
+    <link type="text/html" rel="alternate" href="http://gazit.me{{ post.url }}"/>
+    <title>{{ post.title }}</title>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <author>
+      <name>Idan Gazit</name>
+      <uri>http://gazit.me/</uri>
+    </author>
+    <content type="html">{{ post.content | xml_escape }}</content>
+  </entry>
+  {% endfor %}
+ 
+</feed>
