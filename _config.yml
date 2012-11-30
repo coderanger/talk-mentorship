@@ -1,7 +1,4 @@
 markdown: redcarpet
 pygments: true
 safe: true
-source: git@github.com:jnoller/talk-mentorship.git
-destination: _site
 lsi: false
-pygments: true
