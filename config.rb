@@ -2,10 +2,10 @@
 project_type = :stand_alone
 
 # Publishing paths
-http_path = "/"
-http_images_path = "/images"
-http_fonts_path = "/fonts"
-css_dir = "public/stylesheets"
+http_path = "/talk-mentorship/"
+http_images_path = "/talk-mentorship/images"
+http_fonts_path = "/talk-mentorship/fonts"
+css_dir = "public/talk-mentorship/stylesheets"
 
 # Local development paths
 sass_dir = "sass"
