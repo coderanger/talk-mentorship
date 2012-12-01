@@ -3,10 +3,10 @@
 
 
 /* TEAM */
-  Author: Idan Gazit
-  Site: http://gazit.me
-  Twitter: @idangazit
-  Location: Tel Aviv, Israel
+  Author: Jesse Noller
+  Site: http://speakup.io
+  Twitter: @jessenoller
+  Location: Boston, MA
 
 /* THANKS */
   Names (& URL): Open source hackers everywhere.
