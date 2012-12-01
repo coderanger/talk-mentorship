@@ -33,6 +33,7 @@ body {
         //margin: 0;
         @include rem(0.7, $top: 0.3, $bottom: 0);
     }
+
 }
 
 #pagefooter {
@@ -47,7 +48,7 @@ body {
         height: 3 * $baseline-rems;
         h1 {
             @include rem(1, $top: 1, $bottom: 0);
-        } 
+        }
         .avatar {
             display: inline-block;
             float: left;
@@ -107,7 +108,7 @@ body {
         & + .index {
             margin-top: $baseline-rems;
         }
-        header { 
+        header {
             min-width: 10rem;
             max-width: 22rem;
             margin-left: 5rem;

@@ -1,8 +1,21 @@
 ---
 layout: default
 ---
-
-<h2>Posts</h2>
+<blockquote>
+"Better than a thousand days of diligent study is one day with a great teacher."
+– Japanese Proverb
+</blockquote>
+<h2>Welcome</h2>
+<p>Speak Up! is a community dedicated to empowering and educating speakers of all
+genders, race or experience levels connected to mentors and other resources
+needed to help them through what can be a difficult, daunting and discouraging
+experience.</p>
+<p>Public speaking at conferences.</p>
+<p>We hope, that by providing a welcome and safe environment filled with mentors
+experienced in various aspects, languages and technologies within the industry,
+we can help and encourage thos whose voices and experiences might not otherwise
+be heard.</p>
+<h2>News and Announcements</h2>
 {% for post in site.posts %}
     <article class="index">
         <time datetime="{{ post.date | date_to_xmlschema }}" pubdate>{{ post.date | date_to_string }}</time>
@@ -55,7 +68,7 @@ layout: default
     </header>
 </article>
 <article class="index">
-    <time datetime="2010-05-26" pubdate>26 May 2010</time>    
+    <time datetime="2010-05-26" pubdate>26 May 2010</time>
     <header>
         <h1><a href="http://lanyrd.com/2010/djangocon-eu/shpyz/">Design for Developers: Making Your Frontend Suck Less</a></h1>
         <p class="where">at DjangoCon Europe 2010.</p>
