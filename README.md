@@ -12,4 +12,3 @@ About the project
 > and discouraging experience.
 >
 > Public speaking at conferences.
-
